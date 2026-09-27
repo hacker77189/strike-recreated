@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  /* cursor position for the hero reveal spotlight (updated from JS, throttled) */
+  --mx: 50%;
+  --my: 40%;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #e7e7ea;
+  /* Real STRIKE site uses Gilroy for UI; falls back to Inter/system where unavailable */
+  font-family: 'Gilroy', 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---- Brand / display typography -------------------------------------- */
+.font-audiowide { font-family: 'Audiowide', cursive; }
+
+/* Hero + heading gradient fills (kept monochrome per "minimal color usage") */
+.text-silver {
+  background: linear-gradient(180deg, #ffffff 0%, #cfcfd6 45%, #6c6c72 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-dim-silver {
+  background: linear-gradient(180deg, #6f6f76 0%, #3a3a3f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gold-grad {
+  background: linear-gradient(180deg, #ffe9a8 0%, #d4a017 55%, #b9791a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Brand accent gradient (real STRIKE site) — orange #ff7b00 → #f97316 */
+.text-orange-grad {
+  background: linear-gradient(135deg, #ff7b00 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bg-orange-grad { background: linear-gradient(135deg, #ff7b00 0%, #f97316 100%); }
+.shadow-orange { box-shadow: 0 8px 32px rgba(255, 123, 0, 0.3); }
+
+/* Soft glow behind hero text */
+.hero-glow {
+  background: radial-gradient(ellipse 60% 55% at 50% 45%, rgba(255,255,255,0.16), transparent 70%);
+}
+
+/* ---- Hero cursor-reveal spotlight ------------------------------------ */
+/* The image layer is masked so it is only visible near the cursor:
+   full at the cursor, fading by ~120px, invisible by ~240px. */
+.spotlight-reveal {
+  -webkit-mask-image: radial-gradient(
+    circle 240px at var(--mx) var(--my),
+    rgba(0,0,0,1) 0px,
+    rgba(0,0,0,0.85) 60px,
+    rgba(0,0,0,0.35) 120px,
+    rgba(0,0,0,0) 240px
+  );
+  mask-image: radial-gradient(
+    circle 240px at var(--mx) var(--my),
+    rgba(0,0,0,1) 0px,
+    rgba(0,0,0,0.85) 60px,
+    rgba(0,0,0,0.35) 120px,
+    rgba(0,0,0,0) 240px
+  );
+  mix-blend-mode: lighten;
+  opacity: 0.3;
+  transition: opacity 300ms ease;
+}
+
+/* Atmospheric light beams flanking the hero */
+.beam {
+  position: absolute;
+  width: 620px;
+  height: 1450px;
+  filter: blur(40px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+.beam-left  { left: -160px;  top: -520px; transform: rotate(-45deg); }
+.beam-right { right: -160px; top: -520px; transform: rotate(45deg); }
+
+@media (max-width: 768px) {
+  /* Disable the expensive reveal + beams on mobile */
+  .spotlight-reveal { display: none; }
+  .beam { display: none; }
+}
+
+/* ---- Code editor syntax palette (VS Code Dark+, exact hex) ----------- */
+.tok-comment  { color: #6a9955; font-style: italic; } /* green */
+.tok-keyword  { color: #569cd6; }                      /* blue */
+.tok-function { color: #dcdcaa; }                      /* yellow */
+.tok-default  { color: #d4d4d4; }                      /* default fg */
+.tok-var      { color: #9cdcfe; }                      /* light blue */
+.tok-gold     { color: #ffd700; }                      /* gold literal */
+.tok-string   { color: #ce9178; }                      /* orange */
+.tok-number   { color: #b5cea8; }                      /* number green */
+.tok-punct    { color: #d4d4d4; }
+.line-number  { color: #858585; }
+
+/* ---- Scrollbars ------------------------------------------------------ */
+.scroll-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #2a2a30; border-radius: 8px; }
+.scroll-thin::-webkit-scrollbar-track { background: transparent; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---- Card borders ---------------------------------------------------- */
+.card-ring { border: 1px solid rgba(255,255,255,0.07); }
+.card-ring-gold { border: 1px solid rgba(212,160,23,0.3); }
+
+/* Marquee keyframes shipped directly so they survive Tailwind purge */
+@keyframes marquee  { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes marquee2 { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
