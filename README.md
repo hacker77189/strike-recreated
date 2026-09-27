@@ -7,7 +7,6 @@ tiered membership discount.
 
 The homepage clone is the environment; the boss-fight sale is the original work.
 
-**Live Demo:** https://hacker77189.github.io/strike-recreated/
 
 ---
 
