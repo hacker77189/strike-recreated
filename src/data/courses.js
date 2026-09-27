@@ -6,7 +6,7 @@ export const COURSES = [
     desc: 'Web Development + System Design + Security + DevOps',
     chips: ['100 Days'],
     live: true,
-    img: '/courses/thunder.png',
+    img: 'public/courses/thunder.png',
   },
   {
     title: 'DevOps Full Course',
@@ -15,7 +15,7 @@ export const COURSES = [
     desc: 'Linux + CI/CD + Docker + Kubernetes + Terraform + Cloud',
     chips: ['8 weeks'],
     live: true,
-    img: '/courses/devops.png',
+    img: 'public/courses/devops.png',
   },
   {
     title: 'DSA + GenAI Combo',
@@ -24,7 +24,7 @@ export const COURSES = [
     desc: 'Complete tech stack with DSA and AI',
     chips: ['4 months', 'Beginner to Advanced', '100+ Hours'],
     live: true,
-    img: '/courses/dsa_genai.png',
+    img: 'public/courses/dsa_genai.png',
   },
   {
     title: 'Data Structure & Algorithms',
@@ -33,7 +33,7 @@ export const COURSES = [
     desc: 'Master DSA with C++ from basics to advanced level',
     chips: ['100+ Hours', '4 months'],
     live: true,
-    img: '/courses/dsa_genai.png',
+    img: 'public/courses/dsa_genai.png',
   },
   {
     title: 'Generative AI',
@@ -42,6 +42,6 @@ export const COURSES = [
     desc: 'Build autonomous AI agents from scratch',
     chips: ['50+ Hours', '4 months'],
     live: true,
-    img: '/courses/dsa_genai.png',
+    img: 'public/courses/dsa_genai.png',
   },
 ]

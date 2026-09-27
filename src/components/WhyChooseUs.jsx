@@ -4,9 +4,9 @@ const CARD = 'rounded-3xl border border-white/10 bg-card p-8'
 
 // Public assets (served from /public). Filenames contain spaces → URL-encoded.
 const MEDIA = {
-  interview: '/why_choose_us/interview_prep.png',
-  aiSupport: '/why_choose_us/AI%20Support.mp4',
-  projects: '/why_choose_us/Project%20based%20learning.mp4',
+  interview: 'public/why_choose_us/interview_prep.png',
+  aiSupport: 'public/why_choose_us/AI%20Support.mp4',
+  projects: 'public/why_choose_us/Project%20based%20learning.mp4',
 }
 
 function Video({ src, className = '' }) {

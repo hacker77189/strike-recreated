@@ -9,7 +9,7 @@ const MENTORS = [
     bio: 'Heartfelt Problem Solver, Instructor, and Visionary Leader. Got Highest Placement in India of 2 Cr +. Post Graduate from IIT G, GATE-CSE’20 AIR - 202.',
     tags: ['IIT Graduate', 'Visionary Leader', '2 Cr+ Package'],
     hue: 'from-emerald-500/40',
-    photo: '/mentors/rohit_negi.png',
+    photo: 'public/mentors/rohit_negi.png',
   },
   {
     name: 'Aditya Tandon',
@@ -18,7 +18,7 @@ const MENTORS = [
     bio: 'Senior Software Engineer passionate about scalable systems and elegant algorithms. Dedicated mentor committed to teaching, learning, and inspiring future developers.',
     tags: ['Scalable Systems & Algorithms Expert'],
     hue: 'from-amber-500/40',
-    photo: '/mentors/aditya.png',
+    photo: 'public/mentors/aditya.png',
   },
 ]
 

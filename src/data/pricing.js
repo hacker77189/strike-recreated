@@ -8,7 +8,7 @@ export const PLANS = [
     name: 'Strike Plus',
     badge: null,
     // Banner shown at the top of the card. Served from /public.
-    image: '/membership/plus.png',
+    image: 'public/membership/plus.png',
     desc: 'All existing Strike courses with access for your selected duration.',
     // exact card styling
     cardGradient: 'linear-gradient(160deg, rgb(20,20,20) 0%, rgb(10,10,10) 100%)',
@@ -37,7 +37,7 @@ export const PLANS = [
     theme: 'gold',
     name: 'Strike Ultra',
     badge: 'BEST VALUE',
-    image: '/membership/ultra.png',
+    image: 'public/membership/ultra.png',
     desc: 'This plan includes all existing courses, plus upcoming courses for your selected duration.',
     cardGradient: 'linear-gradient(160deg, rgb(28,18,0) 0%, rgb(18,13,0) 50%, rgb(10,8,0) 100%)',
     cardBorder: 'rgba(212,160,23,0.3)',
