@@ -7,6 +7,8 @@ tiered membership discount.
 
 The homepage clone is the environment; the boss-fight sale is the original work.
 
+**Live Demo:** https://hacker77189.github.io/strike-recreated/
+
 ---
 
 ## Quick start
@@ -16,8 +18,8 @@ The homepage clone is the environment; the boss-fight sale is the original work.
 **1. Clone the repository**
 
 ```bash
-git clone <your-repo-url> strike-clone
-cd strike-clone
+git clone https://github.com/hacker77189/strike-recreated.git
+cd strike-recreated
 ```
 
 **2. Install dependencies**
@@ -60,6 +62,7 @@ Once the homepage loads, the sale plays out entirely on the page:
 ```bash
 npm run build          # production build → dist/
 npm run preview        # serve the production build locally
+npm run deploy         # deploy to GitHub Pages
 node verify-boss.mjs   # headless test of BossEngine + the damage→discount mapping
 ```
 
@@ -101,7 +104,7 @@ The game needs no coding knowledge, so it's approachable for any visitor.
 ## Project structure
 
 ```
-strike-clone/
+strike-recreated/
 ├── index.html
 ├── src/
 │   ├── main.jsx            # React entry
@@ -149,3 +152,21 @@ live in `config.js` — change the numbers there and the whole experience re-tun
   `localStorage`, so the countdown never restarts on reload.
 - **Accessibility:** the game supports keyboard input, honors
   `prefers-reduced-motion`, and uses an `aria-live` region for score updates.
+
+---
+
+## Deployment
+
+This project is configured for **GitHub Pages** deployment.
+
+```bash
+npm run deploy
+```
+
+The `deploy` script builds the production bundle and pushes the `dist/` folder to the `gh-pages` branch, which GitHub Pages serves automatically.
+
+---
+
+## License
+
+MIT — feel free to use, modify, and share.
