@@ -155,18 +155,3 @@ live in `config.js` — change the numbers there and the whole experience re-tun
 
 ---
 
-## Deployment
-
-This project is configured for **GitHub Pages** deployment.
-
-```bash
-npm run deploy
-```
-
-The `deploy` script builds the production bundle and pushes the `dist/` folder to the `gh-pages` branch, which GitHub Pages serves automatically.
-
----
-
-## License
-
-MIT — feel free to use, modify, and share.
